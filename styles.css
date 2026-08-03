@@ -458,6 +458,7 @@ body::before {
   font-family: Georgia, serif;
   font-size: 1.3rem;
   line-height: 1.45;
+  color: #7a4d2b;
 }
 
 .intro-note span {

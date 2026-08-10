@@ -29,6 +29,7 @@ body {
   margin: 0;
   color: var(--text);
   font-family: "Segoe UI", "Trebuchet MS", "Gill Sans", Arial, sans-serif;
+  overflow-x: hidden;
   background:
     radial-gradient(circle at top left, rgba(199, 159, 115, 0.26), transparent 32%),
     radial-gradient(circle at 85% 12%, rgba(122, 77, 43, 0.12), transparent 28%),
@@ -782,9 +783,10 @@ body::before {
 
   .topbar {
     position: static;
-    border-radius: 26px;
+    border-radius: 22px;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
   }
 
   .hero,
@@ -794,11 +796,11 @@ body::before {
   .mistakes,
   .homework,
   .gallery {
-    padding: 16px;
+    padding: 14px;
   }
 
   .hero-visual {
-    min-height: 480px;
+    min-height: 420px;
   }
 
   .hero-copy h1 {
@@ -838,12 +840,12 @@ body::before {
   .floating-card {
     right: 6%;
     top: 48%;
-    width: 135px;
-    padding: 16px 14px;
+    width: 128px;
+    padding: 14px 12px;
   }
 
   .floating-card strong {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 
   .hero-quote,
@@ -861,6 +863,7 @@ body::before {
   .hero-actions {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .chip {
@@ -870,7 +873,7 @@ body::before {
   }
 
   .camera-photo {
-    min-height: 400px;
+    min-height: 360px;
   }
 
   .camera-tag {
@@ -887,17 +890,20 @@ body::before {
 
 @media (max-width: 520px) {
   .topbar {
-    padding: 14px 16px;
-    gap: 12px;
+    padding: 12px 14px;
+    gap: 10px;
   }
 
   .nav {
-    gap: 8px;
+    gap: 6px;
+    width: 100%;
   }
 
   .nav a {
     padding: 8px 10px;
-    font-size: 0.86rem;
+    font-size: 0.82rem;
+    flex: 1 1 calc(50% - 6px);
+    text-align: center;
   }
 
   .hero-copy {
@@ -917,7 +923,7 @@ body::before {
   }
 
   .hero-visual {
-    min-height: 400px;
+    min-height: 360px;
   }
 
   .hero-quote {
@@ -939,7 +945,7 @@ body::before {
   }
 
   .section-head h2 {
-    font-size: 1.45rem;
+    font-size: 1.3rem;
     line-height: 1.15;
   }
 
@@ -947,11 +953,11 @@ body::before {
   .mini-card,
   .homework-card,
   .camera-item {
-    padding: 14px;
+    padding: 12px;
   }
 
   .camera-photo {
-    min-height: 340px;
+    min-height: 320px;
   }
 
   .camera-tag strong {
@@ -969,5 +975,32 @@ body::before {
 
   .mini-gallery img {
     border-radius: 16px;
+  }
+
+  .section-kicker {
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+  }
+
+  .hero-subtitle {
+    line-height: 1.45;
+  }
+
+  .hero-quote p,
+  .text-card p,
+  .text-card li,
+  .mini-card,
+  .homework-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .check-list li,
+  .homework-card li {
+    line-height: 1.55;
+  }
+
+  .hero-note {
+    font-size: 0.95rem;
   }
 }
